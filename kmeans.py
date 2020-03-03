@@ -51,3 +51,41 @@ plt.xlabel('Annual Income (k$)')
 plt.ylabel('Spending Score (1-100)')
 plt.legend()
 plt.show()
+
+
+**********8
+
+%matplotlib inline
+import math,sys,os,numpy as np
+from numpy.linalg import norm
+from PIL import Image
+from matplotlib import pyplot as plt, rcParams, rc
+from scipy.ndimage import imread
+from skimage.measure import block_reduce
+import pickle as pickle
+from scipy.ndimage.filters import correlate, convolve
+rc('animation', html='html5')
+rcParams['figure.figsize'] = 3, 6
+%precision 4
+np.set_printoptions(precision=4, linewidth=100)
+
+*******************
+
+def plots(ims, interp=False, titles=None):
+    ims=np.array(ims)
+    mn,mx=ims.min(),ims.max()
+    f = plt.figure(figsize=(12,24))
+    for i in range(len(ims)):
+        sp=f.add_subplot(1, len(ims), i+1)
+        if not titles is None: sp.set_title(titles[i], fontsize=18)
+        plt.imshow(ims[i], interpolation=None if interp else 'none', vmin=mn,vmax=mx)
+
+def plot(im, interp=False):
+    f = plt.figure(figsize=(3,6), frameon=True)
+    # plt.show(im)
+    plt.imshow(im, interpolation=None if interp else 'none')
+
+plt.gray()
+plt.close()
+
+
