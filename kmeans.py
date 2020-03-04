@@ -117,3 +117,7 @@ def draw_line(a,b,c, color='black', linewidth=2.0, linestyle='solid', starting=0
     plt.plot(x, -c/b - a*x/b, linestyle=linestyle, color=color, linewidth=linewidth)
 
 
+
+import pandas as pd
+X = pd.DataFrame([[1,0],[0,2],[1,1],[1,2],[1,3],[2,2],[3,2],[2,3]])
+y = pd.Series([0,0,0,0,1,1,1,1])
