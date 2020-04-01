@@ -121,3 +121,6 @@ def draw_line(a,b,c, color='black', linewidth=2.0, linestyle='solid', starting=0
 import pandas as pd
 X = pd.DataFrame([[1,0],[0,2],[1,1],[1,2],[1,3],[2,2],[3,2],[2,3]])
 y = pd.Series([0,0,0,0,1,1,1,1])
+
+
+pip install --trusted-host=pypi.python.org --trusted-host=pypi.org --trusted-host=files.pythonhosted.org tensorflow==1.14.0
